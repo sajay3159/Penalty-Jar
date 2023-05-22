@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Penalty Tracker</h1>
+    <p>Current Penalty: <span id="penaltyDisplay">0</span></p>
+    <button onclick="updatePenaltyBy10()">+10</button>
+    <br><br>
+    <input type="number" id="customValue" placeholder="Enter custom value">
+    <button onclick="updatePenaltyByCustomValue()">Add custom value</button>
+  <script>
+    var penaltyValue = 0;
+
+    function updatePenaltyBy10() {
+      penaltyValue += 10;
+      document.getElementById("penaltyDisplay").innerText = penaltyValue;
+    }
+
+    function updatePenaltyByCustomValue() {
+      var customValue = parseInt(document.getElementById("customValue").value);
+      penaltyValue += customValue;
+      document.getElementById("penaltyDisplay").innerText = penaltyValue;
+      document.getElementById("customValue").value = "";
+    }
+
+  </script>
+    
+</body>
+</html>
